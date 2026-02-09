@@ -2,7 +2,12 @@ package com.bloodbank.backend.controller;
 
 import java.util.List;
 
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
 
 import com.bloodbank.backend.model.Donor;
 import com.bloodbank.backend.repository.DonorRepository;
@@ -23,8 +28,11 @@ public class DonorController {
         return repo.save(donor);
     }
 
-    @GetMapping
-    public List<Donor> getAllDonors() {
-        return repo.findAll();
-    }
+    
+    @GetMapping("/donors")
+public List<Donor> getAllDonors() {
+    System.out.println("API HIT ZALI");
+    return repo.findAll();
+}
+
 }
