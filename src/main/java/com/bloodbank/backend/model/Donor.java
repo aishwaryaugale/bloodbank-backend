@@ -21,6 +21,8 @@ public class Donor {
     @Column(name = "blood_group")
     private String bloodGroup;
 
+    private Integer age;   // 🔥 THIS WAS MISSING
+
     private String city;
     private String phone;
 
@@ -46,6 +48,14 @@ public class Donor {
 
     public void setBloodGroup(String bloodGroup) {
         this.bloodGroup = bloodGroup;
+    }
+
+    public Integer getAge() {
+        return age;
+    }
+
+    public void setAge(Integer age) {
+        this.age = age;
     }
 
     public String getCity() {
