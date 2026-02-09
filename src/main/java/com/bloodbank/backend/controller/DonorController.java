@@ -29,7 +29,7 @@ public class DonorController {
     }
 
     
-    @GetMapping("/api/donors")
+    @GetMapping
 public List<Donor> getAllDonors() {
     System.out.println("API HIT ZALI");
     return repo.findAll();
